@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import '@/common/reset.less'
+import { HashRouter as Router, Switch, Route} from 'react-router-dom'
+import Main from '@/pages/Main'
+import Home from '@/pages/Home/Home'
+import Category from '@/pages/Category/Category'
+import Cart from '@/pages/Cart/Cart'
+import User from '@/pages/User/User'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Main>
+          <Switch>
+            <Route path="/home" component={Home}></Route>
+            <Route path="/category" component={Category} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/user" component={User} />
+          </Switch>
+        </Main>
+      </Router>
     </div>
   );
 }
