@@ -1,27 +1,27 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Tab.less'
 
 export default class Tab extends Component {
   render() {
     return (
       <div className="tabbar">
-        <Link to='/home'>
-          <i className="iconfont icon-home_light" />
+        <NavLink to='/home'>
+          <i className="iconfont iconzhuye" />
           <span>首页</span>
-        </Link>
-        <Link to='/category'>
-          <i className="iconfont icon-sortlight" />
+        </NavLink>
+        <NavLink to='/category'>
+          <i className="iconfont iconfenlei" />
           <span>分类</span>
-        </Link>
-        <Link to='/cart'>
-          <i className="iconfont icon-cart" />
+        </NavLink>
+        <NavLink to='/cart'>
+          <i className="iconfont icongouwuche" />
           <span>购物车</span>
-        </Link>
-        <Link to='/user'>
-          <i className="iconfont icon-tubiaolunkuo-" />
+        </NavLink>
+        <NavLink to='/user'>
+          <i className="iconfont icongerenzhongxin" />
           <span>我的</span>
-        </Link>
+        </NavLink>
       </div>
     )
   }

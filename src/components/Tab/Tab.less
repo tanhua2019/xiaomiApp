@@ -1,6 +1,5 @@
 .tabbar {
   position: fixed;
-  //z-index: 500;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -12,5 +11,16 @@
     flex: 1;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    .iconfont {
+      font-size: 0.4rem;
+    }
+    &.active {
+      color: #ff6700;
+    }
+    span {
+      font-size: 15px;
+      margin-top: 5px;
+    }
   }
 }
